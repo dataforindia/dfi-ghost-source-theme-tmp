@@ -1,0 +1,16 @@
+name: deploy-theme
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+      - release
+      - test
+
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
